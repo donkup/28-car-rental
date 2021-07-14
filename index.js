@@ -2,7 +2,8 @@ const CarRental = require('./CarRental');
 
 const cityBird = new CarRental('CityBird');
 
-cityBird.intro();
+
+// cityBird.intro();
 // Hi, we are CityBird and we have 0 cars available.
 
 cityBird.addCar('Toyota Yaris', 'black', 25);
@@ -14,35 +15,35 @@ cityBird.addCar('Tesla 3', 'white', 40);
 cityBird.intro();
 // Hi, we are CityBird and we have 3 cars available.
 
-// cityBird.carPark();
+//cityBird.carPark();
 // console.log(cityBird);
 // 1. Toyota Yaris (black) is for 25EUR/day.
 // 2. Volvo S40 (red) is for 20EUR/day.
 // 3. Tesla 3 (white) is for 40EUR/day.
 
-// cityBird.updateCarPrice(0, 22);
+cityBird.updateCarPrice(2, 2);
 
-// cityBird.carPark();
+//cityBird.carPark();
 // // 1. Toyota Yaris (black) is for 22EUR/day.
 // // 2. Volvo S40 (red) is for 20EUR/day.
 // // 3. Tesla 3 (white) is for 40EUR/day.
 
-// cityBird.carAccident(1);
+cityBird.carAccident(1);
 
-// cityBird.intro();
+//cityBird.intro();
 // // Hi, we are CityBird and we have 2 cars available.
 
-// cityBird.carPark();
+cityBird.carPark();
 // // 1. Toyota Yaris (black) is for 22EUR/day.
 // // 2. Tesla 3 (white) is for 40EUR/day.
 
 
-// cityBird.carRepair(2);
+cityBird.carRepair(1);
 
-// cityBird.intro();
+cityBird.intro();
 // // Hi, we are CityBird and we have 3 cars available.
 
-// cityBird.carPark();
+cityBird.carPark();
 // // 1. Toyota Yaris (black) is for 22EUR/day.
 // // 2. Volvo S40 (red) is for 20EUR/day.
 // // 3. Tesla 3 (white) is for 40EUR/day.

@@ -5,19 +5,29 @@ class CarRental {
 
     }
     intro() {
-        let carCount = this.list.length;
+        let carCount = 0;
+        for (let i = 0; i < this.list.length; i++) {
+            const car = this.list[i];
+            if (car.working) {
+                carCount++;
+            }
+
+        }
         console.log(`Hi, we are ${this.companyName} and we have ${carCount} cars avalible.`);
     }
     addCar(name, color, price) {
-        this.list.push({ name, color, price });
+        this.list.push({ name, color, price, working: true });
 
     }
     carPark() {
+        let carCount = 0;
         for (let i = 0; i < this.list.length; i++) {
-            const object = this.list[i];
-            console.log(
-                `${i + 1}. ${object.name}(${object.color} is for ${object.price} EUR per day.)`
-            )
+            const car = this.list[i];
+            if (car.working) {
+                console.log(
+                    `${++carCount}. ${car.name}(${car.color} is for ${car.price} EUR per day.)`
+                )
+            }
         }
 
     }
